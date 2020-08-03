@@ -10,9 +10,12 @@
 		E79C84DF24D86FD300D20452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C84DE24D86FD300D20452 /* AppDelegate.swift */; };
 		E79C84E124D86FD300D20452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C84E024D86FD300D20452 /* SceneDelegate.swift */; };
 		E79C84E324D86FD300D20452 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C84E224D86FD300D20452 /* ContentView.swift */; };
-		E79C84E524D86FD900D20452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79C84E424D86FD900D20452 /* Assets.xcassets */; };
 		E79C84E824D86FD900D20452 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79C84E724D86FD900D20452 /* Preview Assets.xcassets */; };
 		E79C84EB24D86FD900D20452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79C84E924D86FD900D20452 /* LaunchScreen.storyboard */; };
+		E79C84F324D8704600D20452 /* helicopterSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C84F224D8704600D20452 /* helicopterSound.swift */; };
+		E79C84F524D870D500D20452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79C84F424D870D500D20452 /* Assets.xcassets */; };
+		E79C84FA24D8722400D20452 /* helicopterSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E79C84F924D8722400D20452 /* helicopterSound.mp3 */; };
+		E79C84FC24D8722E00D20452 /* droneSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E79C84FB24D8722E00D20452 /* droneSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		E79C84DE24D86FD300D20452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79C84E024D86FD300D20452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E79C84E224D86FD300D20452 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E79C84E424D86FD900D20452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79C84E724D86FD900D20452 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E79C84EA24D86FD900D20452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E79C84EC24D86FD900D20452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79C84F224D8704600D20452 /* helicopterSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helicopterSound.swift; sourceTree = "<group>"; };
+		E79C84F424D870D500D20452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Swift/HackingWithSwift/LandingGame/LandingGame/Assets.xcassets; sourceTree = "<group>"; };
+		E79C84F924D8722400D20452 /* helicopterSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = helicopterSound.mp3; sourceTree = "<group>"; };
+		E79C84FB24D8722E00D20452 /* droneSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = droneSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				E79C84DE24D86FD300D20452 /* AppDelegate.swift */,
+				E79C84F824D8721000D20452 /* Sounds */,
 				E79C84E024D86FD300D20452 /* SceneDelegate.swift */,
 				E79C84E224D86FD300D20452 /* ContentView.swift */,
-				E79C84E424D86FD900D20452 /* Assets.xcassets */,
+				E79C84F224D8704600D20452 /* helicopterSound.swift */,
+				E79C84F424D870D500D20452 /* Assets.xcassets */,
 				E79C84E924D86FD900D20452 /* LaunchScreen.storyboard */,
 				E79C84EC24D86FD900D20452 /* Info.plist */,
 				E79C84E624D86FD900D20452 /* Preview Content */,
@@ -73,6 +81,15 @@
 				E79C84E724D86FD900D20452 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E79C84F824D8721000D20452 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E79C84F924D8722400D20452 /* helicopterSound.mp3 */,
+				E79C84FB24D8722E00D20452 /* droneSound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79C84EB24D86FD900D20452 /* LaunchScreen.storyboard in Resources */,
+				E79C84FA24D8722400D20452 /* helicopterSound.mp3 in Resources */,
 				E79C84E824D86FD900D20452 /* Preview Assets.xcassets in Resources */,
-				E79C84E524D86FD900D20452 /* Assets.xcassets in Resources */,
+				E79C84FC24D8722E00D20452 /* droneSound.mp3 in Resources */,
+				E79C84F524D870D500D20452 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79C84F324D8704600D20452 /* helicopterSound.swift in Sources */,
 				E79C84DF24D86FD300D20452 /* AppDelegate.swift in Sources */,
 				E79C84E124D86FD300D20452 /* SceneDelegate.swift in Sources */,
 				E79C84E324D86FD300D20452 /* ContentView.swift in Sources */,
