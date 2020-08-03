@@ -38,7 +38,6 @@ struct ContentView: View {
     @State private var helicopterPosition: CGSize = .zero
     @State private var landingPadPosition: CGSize = .zero
     
-    
     @State private var isEngineSoundOn: Bool = true
     @State private var isLanded: Bool = false
     @State private var isLandingScale: CGFloat = 1
@@ -56,7 +55,6 @@ struct ContentView: View {
     var screenHeightBound: CGFloat {
         UIScreen.screenHeight / 2 - helicopterSize / 2
     }
-    
     var body: some View {
         VStack {
             Spacer()
@@ -95,7 +93,6 @@ struct ContentView: View {
                 Spacer()
                 Button(action: {
                     self.showingAlert = true
-                    //self.restartGame()
                 }) {
                     Image(systemName: "arrow.clockwise.circle.fill")
                         .frame(width: 20, height: 20, alignment: .center)
@@ -121,7 +118,7 @@ struct ContentView: View {
                         Image("helicopterSymbol")
                             .resizable()
                             .frame(width: 40, height: 40, alignment: .center)
-                            
+                        
                     } else {
                         Image("droneSymbol")
                             .resizable()
@@ -131,14 +128,12 @@ struct ContentView: View {
                             .padding(.trailing, 7.5)
                             .padding(.leading, 7.5)
                     }
-                    
                 }
                 Spacer()
                 Button(action: {
                     self.isEngineSoundOn.toggle()
                     self.startSound()
                 }) {
-                    
                     if self.isEngineSoundOn {
                         Image(systemName: "speaker.2.fill")
                         
@@ -158,8 +153,6 @@ struct ContentView: View {
         .onAppear {
             self.startGame()
         }
-        
-        
     }
     
     func startGame() {
@@ -247,7 +240,6 @@ struct ContentView: View {
                 engineSound?.setVolume(1, fadeDuration: 1.5)
                 self.randomizePosition(of: &self.landingPadPosition)
             }
-            
         }
     }
     
@@ -275,7 +267,6 @@ struct ContentView: View {
             }
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
