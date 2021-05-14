@@ -17,5 +17,6 @@ Using iPhone accelerometer user have to fly by helicopter or drone to landing pa
 
 ## Tech
   - SwiftUI
+  - Core Animation
   - Core Motion
   - AVFoundation
